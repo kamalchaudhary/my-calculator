@@ -38,6 +38,35 @@ namespace CalcTest
         }
 
 
+        [Test]
+        public void Subtraction_of_two_integers()
+        {
+            double a = 10, b = 1;//arrange
+            calc.SetFirstNumber(a);//arrange
+            calc.SetSecondNumber(b);//arrange
+            double res = calc.GetSubtraction(); //act
+            Assert.AreEqual(res, 9); //assert
+        }
+        [Test]
+        public void Subtraction_of_two_integers_1()
+        {
+            double a = 500, b = 400;//arrange
+            calc.SetFirstNumber(a);//arrange
+            calc.SetSecondNumber(b);//arrange
+            double res = calc.GetSubtraction(); //act
+            Assert.AreEqual(res, 100); //assert fail
+        }
+        [Test]
+        public void Subtraction_of_two_integers_2()
+        {
+            double a = 15, b = 14;//arrange
+            calc.SetFirstNumber(a);//arrange
+            calc.SetSecondNumber(b);//arrange
+            double res = calc.GetSubtraction(); //act
+            Assert.AreEqual(res, 1); //assert
+        }
+
+
 
 
 
