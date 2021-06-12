@@ -92,5 +92,32 @@ namespace CalcTest
             double res = calc.GetMultiplication(); //act
             Assert.AreEqual(res, 56); //assert
         }
+        [Test]
+        public void Division_of_two_integers()
+        {
+            double a = 10, b = 1;//arrange
+            calc.SetFirstNumber(a);//arrange
+            calc.SetSecondNumber(b);//arrange
+            double res = calc.GetDivision(); //act
+            Assert.AreEqual(res, 10); //assert
+        }
+        [Test]
+        public void Division_of_two_integers_1()
+        {
+            double a = 50, b = 10;//arrange
+            calc.SetFirstNumber(a);//arrange
+            calc.SetSecondNumber(b);//arrange
+            double res = calc.GetDivision(); //act
+            Assert.AreEqual(res, 5); //assert fail
+        }
+        [Test]
+        public void Division_of_two_integers_2()
+        {
+            double a = 40, b = 4;//arrange
+            calc.SetFirstNumber(a);//arrange
+            calc.SetSecondNumber(b);//arrange
+            double res = calc.GetDivision(); //act
+            Assert.AreEqual(res, 10); //assert
+        }
     }
 }
